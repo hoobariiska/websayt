@@ -1,3 +1,8 @@
+Haa, waxaan arkay khalad yar oo ku jira code-ka aad hadda soo dirtay. Qaybtan:
+data.append(", name);
+waa khalad, waana sababta fariinta labaad aysan si sax ah u diri karin magaca.
+Waxaan kuu saxay khaladkaas oo keliya, wax kasta oo kale sidaad rabtay ayaan u reebay. Number iyo qoraal labadaba waa la diri karaa.
+Code-ka la saxay
 <!DOCTYPE html>
 <html lang="so">
 <head>
@@ -163,7 +168,7 @@
     <!-- BOGGA HORE -->
     <div class="page active" id="page1">
 
-      <h1>naagtii in la waso rabta xagan iska duwaan gali</h1>
+      <h1>Dalxiis Nala Raac</h1>
 
       <p>
         Haddii aad rabto inaad nala dalxiisto,
@@ -246,7 +251,7 @@
       </p>
 
       <p>
-        Hadda fadlan geli magacaaga iyo lambarkaaga
+        Hadda fadlan geli magacaaga iyo number ama qoraal
         si aan kula soo xiriirno.
       </p>
 
@@ -261,13 +266,13 @@
     </div>
 
 
-    <!-- MAGACA IYO LAMBARKA -->
+    <!-- MAGACA IYO NUMBER/QORAALKA -->
     <div class="page" id="page5">
 
       <h1>Macluumaadkaaga</h1>
 
       <p>
-        Fadlan geli magacaaga iyo lambarkaaga telefoonka.
+        Fadlan geli magacaaga iyo number ama qoraal.
       </p>
 
       <label>Magacaaga</label>
@@ -278,12 +283,12 @@
         placeholder="Geli magacaaga"
       >
 
-      <label>Lambarkaaga</label>
+      <label>Number ama qoraal</label>
 
       <input
-        type="tel"
+        type="text"
         id="phone"
-        placeholder="Geli lambarkaaga"
+        placeholder="Geli number ama qoraal"
       >
 
       <button onclick="sendForm()">
@@ -295,7 +300,7 @@
       </button>
 
       <div class="error" id="error">
-        Fadlan buuxi magaca iyo lambarka.
+        Fadlan buuxi magaca iyo number/qoraalka.
       </div>
 
     </div>
@@ -371,13 +376,6 @@
 
   <script>
 
-    /*
-      HALKAN WAXBA HA KA BEDDELIN
-      FORMSPREE-GAAGA:
-      https://formspree.io/f/xnpjnzak
-    */
-
-
     function showPage(number) {
 
       document.querySelectorAll(".page").forEach(function(page) {
@@ -451,7 +449,7 @@
 
       data.append("Nooca Fariinta", "Diiwaangelin Cusub");
       data.append("Magaca", name);
-      data.append("Lambarka", phone);
+      data.append("Lambarka ama Qoraalka", phone);
       data.append("Nooca Gaadhiga", car);
       data.append("Meesha", destination);
 
@@ -529,7 +527,7 @@
 
       data.append("Nooca Fariinta", "Fariin Dheeraad ah");
       data.append("Magaca", name);
-      data.append("Lambarka", phone);
+      data.append("Lambarka ama Qoraalka", phone);
       data.append("Fariinta Qofka", message);
 
 
@@ -580,4 +578,4 @@
   </script>
 
 </body>
-  </html>
+      </html>
