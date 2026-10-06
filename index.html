@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>my.free.coins.com</title>
+
+  <title>Diiwaangelinta Dalxiiska</title>
 
   <style>
     * {
@@ -14,386 +15,569 @@
     }
 
     body {
-      background: #f4f7fb;
-      color: #172033;
-    }
-
-    header {
-      background: linear-gradient(135deg, #111827, #2563eb);
-      color: white;
-      padding: 22px 18px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    header h1 {
-      font-size: 23px;
-      margin-bottom: 6px;
-    }
-
-    header p {
-      font-size: 13px;
-      opacity: .85;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 600px;
-      margin: auto;
-      padding: 15px;
-    }
-
-    /* FREE COINS */
-    .free-section {
-      background: linear-gradient(135deg, #16a34a, #22c55e);
-      color: white;
-      border-radius: 20px;
-      padding: 25px 18px;
-      text-align: center;
-      margin-bottom: 20px;
-      box-shadow: 0 8px 25px rgba(34,197,94,.25);
-    }
-
-    .free-section h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .free-section p {
-      font-size: 15px;
-      line-height: 1.5;
-      margin-bottom: 18px;
-    }
-
-    .main-btn {
-      display: inline-block;
-      background: white;
-      color: #15803d;
-      border: none;
-      border-radius: 12px;
-      padding: 13px 25px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    /* SHOP */
-    .section-title {
-      font-size: 21px;
-      margin: 22px 0 12px;
-    }
-
-    .products {
-      display: grid;
-      gap: 13px;
-    }
-
-    .product {
-      background: white;
-      border-radius: 17px;
-      padding: 17px;
-      box-shadow: 0 4px 15px rgba(0,0,0,.07);
+      min-height: 100vh;
+      background: linear-gradient(135deg, #087f5b, #16a085);
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-    }
-
-    .product h3 {
-      font-size: 17px;
-      margin-bottom: 5px;
-    }
-
-    .product p {
-      font-size: 13px;
-      color: #6b7280;
-    }
-
-    .price {
-      color: #2563eb;
-      font-weight: bold;
-      margin-top: 5px;
-    }
-
-    .buy-btn {
-      background: #2563eb;
-      color: white;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    /* MESSAGE */
-    .message-box {
-      display: none;
-      background: white;
-      border-radius: 20px;
       padding: 20px;
-      margin-top: 18px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
     }
 
-    .message-box.show {
+    .box {
+      width: 100%;
+      max-width: 450px;
+      background: white;
+      padding: 30px 25px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .page {
+      display: none;
+    }
+
+    .page.active {
       display: block;
     }
 
-    .message-box h2 {
-      margin-bottom: 8px;
+    h1 {
+      color: #087f5b;
+      margin-bottom: 15px;
+      font-size: 28px;
     }
 
-    .message-box p {
-      color: #6b7280;
-      font-size: 14px;
+    h2 {
+      color: #087f5b;
       margin-bottom: 15px;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 20px;
     }
 
     label {
       display: block;
-      font-size: 14px;
+      text-align: left;
       font-weight: bold;
-      margin: 12px 0 6px;
+      margin: 15px 0 7px;
+      color: #333;
     }
 
     input,
+    select,
     textarea {
       width: 100%;
-      border: 1px solid #d1d5db;
-      border-radius: 11px;
-      padding: 13px;
-      font-size: 15px;
-      outline: none;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      background: white;
     }
 
     textarea {
-      min-height: 110px;
+      min-height: 130px;
       resize: vertical;
     }
 
     input:focus,
+    select:focus,
     textarea:focus {
-      border-color: #2563eb;
+      outline: none;
+      border-color: #087f5b;
     }
 
-    .send-btn {
+    button {
       width: 100%;
-      margin-top: 15px;
-      background: #16a34a;
-      color: white;
-      border: none;
       padding: 14px;
-      border-radius: 12px;
-      font-size: 16px;
+      margin-top: 18px;
+      border: none;
+      border-radius: 10px;
+      background: #087f5b;
+      color: white;
+      font-size: 17px;
       font-weight: bold;
       cursor: pointer;
     }
 
-    footer {
-      text-align: center;
-      color: #6b7280;
-      font-size: 12px;
-      padding: 30px 10px;
+    button:hover {
+      background: #056044;
     }
 
-    @media (min-width: 600px) {
-      .container {
-        padding: 25px;
-      }
+    .back {
+      background: #777;
+    }
 
-      .products {
-        grid-template-columns: 1fr 1fr;
+    .back:hover {
+      background: #555;
+    }
+
+    .success-icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .success-text {
+      color: #087f5b;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .loading {
+      width: 45px;
+      height: 45px;
+      border: 5px solid #ddd;
+      border-top: 5px solid #087f5b;
+      border-radius: 50%;
+      margin: 20px auto;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
       }
+    }
+
+    .error {
+      color: red;
+      margin-top: 15px;
+      display: none;
+    }
+
+    .message-success {
+      color: #087f5b;
+      font-weight: bold;
+      margin-top: 15px;
+      display: none;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>my.free.coins.com</h1>
-  <p>Coins & Shop</p>
-</header>
+  <div class="box">
 
-<div class="container">
+    <!-- BOGGA HORE -->
+    <div class="page active" id="page1">
 
-  <!-- FREE COINS -->
-  <section class="free-section">
-    <h2>Halkan ka dalbo Coins Free ah</h2>
+      <h1>Dalxiis Nala Raac</h1>
 
-    <p> 
-      my conami
-    </p>
+      <p>
+        Haddii aad rabto inaad nala dalxiisto,
+        halkan iska diiwaangeli.
+      </p>
 
-    <button class="main-btn" onclick="showMessage()">
-      Halkan Riix
-    </button>
-  </section>
+      <button onclick="showPage(2)">
+        Iska Diiwaangeli
+      </button>
+
+    </div>
 
 
-  <!-- MESSAGE FORM -->
-  <section class="message-box" id="messageBox">
+    <!-- NOOCA GAADHIGA -->
+    <div class="page" id="page2">
 
-    <h2>Fariin noo soo dir</h2>
+      <h1>Dooro Gaadhiga</h1>
 
-    <p>
-      enter your Gmail 
-    </p>
+      <p>
+        Geli nooca gaadhiga aad rabto inaad raacdo.
+      </p>
 
-    <form onsubmit="sendMessage(event)">
+      <label>Nooca gaadhiga</label>
 
-      <label>Gmail</label>
+      <select id="car">
+        <option value="">-- Dooro gaadhi --</option>
+        <option value="Bas">Bas</option>
+        <option value="Minibus">Minibus</option>
+        <option value="Gaadhi yar">Gaadhi yar</option>
+        <option value="4x4">4x4</option>
+      </select>
+
+      <button onclick="carNext()">
+        Hore u sii gal
+      </button>
+
+      <button class="back" onclick="showPage(1)">
+        Dib ugu noqo
+      </button>
+
+    </div>
+
+
+    <!-- MEESHA -->
+    <div class="page" id="page3">
+
+      <h1>Meesha Aad Tagayso</h1>
+
+      <p>
+        Geli meesha aad rabto inaad tagto.
+      </p>
+
+      <label>Meesha aad rabto inaad tagto</label>
 
       <input
-        type="email"
-        id="email"
-        placeholder="example@gmail.com"
-        required
+        type="text"
+        id="destination"
+        placeholder="Tusaale: Hargeysa"
       >
 
-      <label>password </label>
+      <button onclick="destinationNext()">
+        Hore u sii gal
+      </button>
+
+      <button class="back" onclick="showPage(2)">
+        Dib ugu noqo
+      </button>
+
+    </div>
+
+
+    <!-- HORE U SII GAL -->
+    <div class="page" id="page4">
+
+      <h1>Hore u sii gal</h1>
+
+      <p>
+        Waxaad dooratay gaadhiga iyo meesha aad rabto
+        inaad tagto.
+      </p>
+
+      <p>
+        Hadda fadlan geli magacaaga iyo lambarkaaga
+        si aan kula soo xiriirno.
+      </p>
+
+      <button onclick="showPage(5)">
+        Hore u sii gal
+      </button>
+
+      <button class="back" onclick="showPage(3)">
+        Dib ugu noqo
+      </button>
+
+    </div>
+
+
+    <!-- MAGACA IYO LAMBARKA -->
+    <div class="page" id="page5">
+
+      <h1>Macluumaadkaaga</h1>
+
+      <p>
+        Fadlan geli magacaaga iyo lambarkaaga telefoonka.
+      </p>
+
+      <label>Magacaaga</label>
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Geli magacaaga"
+      >
+
+      <label>Lambarkaaga</label>
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Geli lambarkaaga"
+      >
+
+      <button onclick="sendForm()">
+        Diiwaangeli
+      </button>
+
+      <button class="back" onclick="showPage(4)">
+        Dib ugu noqo
+      </button>
+
+      <div class="error" id="error">
+        Fadlan buuxi magaca iyo lambarka.
+      </div>
+
+    </div>
+
+
+    <!-- MARKA LA DIIWAANGELIYO -->
+    <div class="page" id="page6">
+
+      <div class="success-icon">✅</div>
+
+      <h2>Diiwaangelinta waa la helay</h2>
+
+      <div class="loading"></div>
+
+      <p class="success-text">
+        Fadlan na sug.
+      </p>
+
+      <p>
+        Waxaan kula soo xiriiri doonaa
+        <strong>10 daqiiqo gudahood.</strong>
+      </p>
+
+      <p>
+        Haddii aad rabto, waxaad hadda noo soo diri kartaa
+        hal fariin oo dheeraad ah.
+      </p>
+
+      <button onclick="showPage(7)">
+        Qor fariin
+      </button>
+
+    </div>
+
+
+    <!-- FARIINTA DHEERAADKA AH -->
+    <div class="page" id="page7">
+
+      <h1>Qor Fariintaada</h1>
+
+      <p>
+        Halkan waxaad ku qori kartaa hal fariin oo aad
+        rabto inaad noo soo dirto.
+      </p>
+
+      <label>Fariintaada</label>
 
       <textarea
         id="message"
         placeholder="Halkan ku qor fariintaada..."
-        required
       ></textarea>
 
-      <button class="send-btn" type="submit">
-        enter 
+      <button onclick="sendMessage()">
+        Dir Fariinta
       </button>
 
-    </form>
+      <button class="back" onclick="showPage(6)">
+        Dib ugu noqo
+      </button>
 
-  </section>
-
-
-  <!-- SHOP -->
-  <h2 class="section-title">Shop</h2>
-
-  <div class="products">
-
-    <!-- PRODUCT 1 -->
-    <div class="product">
-      <div>
-        <h3>100 Coins</h3>
-        <p>Premium Coins</p>
-        <div class="price">$1.00</div>
+      <div class="error" id="messageError">
+        Fadlan fariinta qor.
       </div>
 
-      <button class="buy-btn" onclick="buyProduct('100 Coins')">
-        Buy
-      </button>
-    </div>
-
-
-    <!-- PRODUCT 2 -->
-    <div class="product">
-      <div>
-        <h3>500 Coins</h3>
-        <p>Premium Coins</p>
-        <div class="price">$4.00</div>
+      <div class="message-success" id="messageSuccess">
+        Fariintaada waa la diray. Mahadsanid!
       </div>
 
-      <button class="buy-btn" onclick="buyProduct('500 Coins')">
-        Buy
-      </button>
-    </div>
-
-
-    <!-- PRODUCT 3 -->
-    <div class="product">
-      <div>
-        <h3>1000 Coins</h3>
-        <p>Premium Coins</p>
-        <div class="price">$7.00</div>
-      </div>
-
-      <button class="buy-btn" onclick="buyProduct('1000 Coins')">
-        Buy
-      </button>
-    </div>
-
-
-    <!-- PRODUCT 4 -->
-    <div class="product">
-      <div>
-        <h3>2000 Coins</h3>
-        <p>Premium Coins</p>
-        <div class="price">$12.00</div>
-      </div>
-
-      <button class="buy-btn" onclick="buyProduct('2000 Coins')">
-        Buy
-      </button>
     </div>
 
   </div>
 
-</div>
 
-
-<footer>
-  © 2027 my.free.coins.com — All Rights Reserved
-</footer>
-
-
-<script>
-
-  function showMessage() {
-    const box = document.getElementById("messageBox");
-
-    box.classList.add("show");
-
-    box.scrollIntoView({
-      behavior: "smooth"
-    });
-  }
-
-
-  function sendMessage(event) {
-
-    event.preventDefault();
-
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+  <script>
 
     /*
-      HALKAN geli Gmail-ka aad rabto in fariimaha laguugu diro.
-      Tusaale:
-      antonymarcos1143@gmail.com 
+      HALKAN WAXBA HA KA BEDDELIN
+      FORMSPREE-GAAGA:
+      https://formspree.io/f/xnpjnzak
     */
 
-    const myEmail = "YOUR-GMAIL@gmail.com";
 
-    const subject = "Free Coins Request";
+    function showPage(number) {
 
-    const body =
-      "Gmail-ka qofka: " + email +
-      "\n\nFariintiisa:\n" + message;
+      document.querySelectorAll(".page").forEach(function(page) {
+        page.classList.remove("active");
+      });
 
-    window.location.href =
-      "mailto:" + myEmail +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
-  }
+      document.getElementById("page" + number)
+        .classList.add("active");
+    }
 
 
-  function buyProduct(productName) {
+    function carNext() {
 
-    document.getElementById("messageBox").classList.add("show");
+      const car = document.getElementById("car").value;
 
-    document.getElementById("message").value =
-      "Waxaan rabaa inaan iibsado: " + productName;
+      if (car === "") {
+        alert("Fadlan dooro nooca gaadhiga.");
+        return;
+      }
 
-    document.getElementById("messageBox").scrollIntoView({
-      behavior: "smooth"
-    });
-  }
+      showPage(3);
+    }
 
-</script>
+
+    function destinationNext() {
+
+      const destination =
+        document.getElementById("destination").value.trim();
+
+      if (destination === "") {
+        alert("Fadlan geli meesha aad rabto inaad tagto.");
+        return;
+      }
+
+      showPage(4);
+    }
+
+
+    /* DIIWAANGELINTA KOOWAAD */
+
+    async function sendForm() {
+
+      const name =
+        document.getElementById("name").value.trim();
+
+      const phone =
+        document.getElementById("phone").value.trim();
+
+      const car =
+        document.getElementById("car").value;
+
+      const destination =
+        document.getElementById("destination").value.trim();
+
+      const error =
+        document.getElementById("error");
+
+
+      if (name === "" || phone === "") {
+
+        error.style.display = "block";
+
+        return;
+      }
+
+
+      error.style.display = "none";
+
+
+      const data = new FormData();
+
+      data.append("Nooca Fariinta", "Diiwaangelin Cusub");
+      data.append("Magaca", name);
+      data.append("Lambarka", phone);
+      data.append("Nooca Gaadhiga", car);
+      data.append("Meesha", destination);
+
+
+      try {
+
+        const response = await fetch(
+          "https://formspree.io/f/xnpjnzak",
+          {
+            method: "POST",
+            body: data,
+            headers: {
+              "Accept": "application/json"
+            }
+          }
+        );
+
+
+        if (response.ok) {
+
+          showPage(6);
+
+        } else {
+
+          alert(
+            "Diiwaangelinta lama dirin. Fadlan mar kale isku day."
+          );
+
+        }
+
+      } catch (error) {
+
+        alert(
+          "Internet-ka ayaa cilad leh. Fadlan mar kale isku day."
+        );
+
+      }
+
+    }
+
+
+    /* FARIINTA DHEERAADKA AH */
+
+    async function sendMessage() {
+
+      const message =
+        document.getElementById("message").value.trim();
+
+      const messageError =
+        document.getElementById("messageError");
+
+      const messageSuccess =
+        document.getElementById("messageSuccess");
+
+
+      if (message === "") {
+
+        messageError.style.display = "block";
+
+        return;
+      }
+
+
+      messageError.style.display = "none";
+
+
+      const name =
+        document.getElementById("name").value.trim();
+
+      const phone =
+        document.getElementById("phone").value.trim();
+
+
+      const data = new FormData();
+
+      data.append("Nooca Fariinta", "Fariin Dheeraad ah");
+      data.append("Magaca", name);
+      data.append("Lambarka", phone);
+      data.append("Fariinta Qofka", message);
+
+
+      try {
+
+        const response = await fetch(
+          "https://formspree.io/f/xnpjnzak",
+          {
+            method: "POST",
+            body: data,
+            headers: {
+              "Accept": "application/json"
+            }
+          }
+        );
+
+
+        if (response.ok) {
+
+          messageSuccess.style.display = "block";
+
+          document.querySelector(
+            "#page7 button"
+          ).disabled = true;
+
+          document.querySelector(
+            "#page7 button"
+          ).style.background = "#999";
+
+        } else {
+
+          alert(
+            "Fariinta lama dirin. Fadlan mar kale isku day."
+          );
+
+        }
+
+      } catch (error) {
+
+        alert(
+          "Internet-ka ayaa cilad leh. Fadlan mar kale isku day."
+        );
+
+      }
+
+    }
+
+  </script>
 
 </body>
-  </html>
+        </html>
