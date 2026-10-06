@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my.free.coins.com</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #172033;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111827, #2563eb);
+      color: white;
+      padding: 22px 18px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 23px;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 13px;
+      opacity: .85;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      padding: 15px;
+    }
+
+    /* FREE COINS */
+    .free-section {
+      background: linear-gradient(135deg, #16a34a, #22c55e);
+      color: white;
+      border-radius: 20px;
+      padding: 25px 18px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 25px rgba(34,197,94,.25);
+    }
+
+    .free-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .free-section p {
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .main-btn {
+      display: inline-block;
+      background: white;
+      color: #15803d;
+      border: none;
+      border-radius: 12px;
+      padding: 13px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* SHOP */
+    .section-title {
+      font-size: 21px;
+      margin: 22px 0 12px;
+    }
+
+    .products {
+      display: grid;
+      gap: 13px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 17px;
+      padding: 17px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.07);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .product h3 {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .product p {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .price {
+      color: #2563eb;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .buy-btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* MESSAGE */
+    .message-box {
+      display: none;
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin-top: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .message-box.show {
+      display: block;
+    }
+
+    .message-box h2 {
+      margin-bottom: 8px;
+    }
+
+    .message-box p {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 12px 0 6px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #d1d5db;
+      border-radius: 11px;
+      padding: 13px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #2563eb;
+    }
+
+    .send-btn {
+      width: 100%;
+      margin-top: 15px;
+      background: #16a34a;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      color: #6b7280;
+      font-size: 12px;
+      padding: 30px 10px;
+    }
+
+    @media (min-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+
+      .products {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>my.free.coins.com</h1>
+  <p>Coins & Shop</p>
+</header>
+
+<div class="container">
+
+  <!-- FREE COINS -->
+  <section class="free-section">
+    <h2>Halkan ka dalbo Coins Free ah</h2>
+
+    <p>
+      Haddii aad rabto Coins Free ah, riix batoonka hoose
+      kadibna noo soo dir fariintaada.
+    </p>
+
+    <button class="main-btn" onclick="showMessage()">
+      Halkan Riix
+    </button>
+  </section>
+
+
+  <!-- MESSAGE FORM -->
+  <section class="message-box" id="messageBox">
+
+    <h2>Fariin noo soo dir</h2>
+
+    <p>
+      Fadlan geli Gmail-kaaga iyo fariinta aad rabto inaad noo soo dirto.
+    </p>
+
+    <form onsubmit="sendMessage(event)">
+
+      <label>Gmail</label>
+
+      <input
+        type="email"
+        id="email"
+        placeholder="example@gmail.com"
+        required
+      >
+
+      <label>Fariintaada</label>
+
+      <textarea
+        id="message"
+        placeholder="Halkan ku qor fariintaada..."
+        required
+      ></textarea>
+
+      <button class="send-btn" type="submit">
+        Soo Dir Fariinta
+      </button>
+
+    </form>
+
+  </section>
+
+
+  <!-- SHOP -->
+  <h2 class="section-title">Shop</h2>
+
+  <div class="products">
+
+    <!-- PRODUCT 1 -->
+    <div class="product">
+      <div>
+        <h3>100 Coins</h3>
+        <p>Premium Coins</p>
+        <div class="price">$1.00</div>
+      </div>
+
+      <button class="buy-btn" onclick="buyProduct('100 Coins')">
+        Buy
+      </button>
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+    <div class="product">
+      <div>
+        <h3>500 Coins</h3>
+        <p>Premium Coins</p>
+        <div class="price">$4.00</div>
+      </div>
+
+      <button class="buy-btn" onclick="buyProduct('500 Coins')">
+        Buy
+      </button>
+    </div>
+
+
+    <!-- PRODUCT 3 -->
+    <div class="product">
+      <div>
+        <h3>1000 Coins</h3>
+        <p>Premium Coins</p>
+        <div class="price">$7.00</div>
+      </div>
+
+      <button class="buy-btn" onclick="buyProduct('1000 Coins')">
+        Buy
+      </button>
+    </div>
+
+
+    <!-- PRODUCT 4 -->
+    <div class="product">
+      <div>
+        <h3>2000 Coins</h3>
+        <p>Premium Coins</p>
+        <div class="price">$12.00</div>
+      </div>
+
+      <button class="buy-btn" onclick="buyProduct('2000 Coins')">
+        Buy
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+
+<footer>
+  © 2026 my.free.coins.com — All Rights Reserved
+</footer>
+
+
+<script>
+
+  function showMessage() {
+    const box = document.getElementById("messageBox");
+
+    box.classList.add("show");
+
+    box.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+
+
+  function sendMessage(event) {
+
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    /*
+      HALKAN geli Gmail-ka aad rabto in fariimaha laguugu diro.
+      Tusaale:
+      antonymarcos1143@gmail.com 
+    */
+
+    const myEmail = "YOUR-GMAIL@gmail.com";
+
+    const subject = "Free Coins Request";
+
+    const body =
+      "Gmail-ka qofka: " + email +
+      "\n\nFariintiisa:\n" + message;
+
+    window.location.href =
+      "mailto:" + myEmail +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+  }
+
+
+  function buyProduct(productName) {
+
+    document.getElementById("messageBox").classList.add("show");
+
+    document.getElementById("message").value =
+      "Waxaan rabaa inaan iibsado: " + productName;
+
+    document.getElementById("messageBox").scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+
+</script>
+
+</body>
+  </html>
